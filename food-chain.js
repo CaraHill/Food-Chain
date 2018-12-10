@@ -42,29 +42,29 @@ She's dead, of course!
   verse(number) {
     if (number === 8) return this.critterVerses[number];
 
-    let song = "";
+    let verse = "";
 
-    song += this.critterVerses[number];
+    verse += this.critterVerses[number];
 
     if (number > 1) {
-      song += `
+      verse += `
 ${this.swallows(number)}
 I don't know why she swallowed the fly. Perhaps she'll die.
 `;  } else {
-      song += `
+      verse += `
 I don't know why she swallowed the fly. Perhaps she'll die.
 `;  }
 
-    return song;
+    return verse;
   }
 
-  swallows(finalVerse) {
+  swallows(number) {
     let swallowVerses = "";
-    let verseCount = finalVerse;
+    let verseCount = number;
 
-    for (let i = 0; i <= finalVerse; i++) {
+    for (let i = 0; i <= number; i++) {
       if (this.critters[verseCount] === "bird") {
-        swallowVerses += this.spider();
+        swallowVerses += this.spiderAndBird();
         verseCount -= 1;
       } else if (this.critters[verseCount] === "fly") {
         swallowVerses += "";
@@ -78,7 +78,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     return swallowVerses;
   }
 
-  spider() {
+  spiderAndBird() {
     return `She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.`;
   }
 }
