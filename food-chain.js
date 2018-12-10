@@ -20,7 +20,11 @@ class Song {
 
   verse(number) {
     let creature = this.verses[number];
-    if (number > 1) {
+    if (number === 8) {
+      return `I know an old lady who swallowed a horse.
+She's dead, of course!
+`;
+    } else if (number > 1) {
       return `I know an old lady who swallowed a ${creature}.
 ${this.secondaryVerses[creature]}
 ${this.swallows(number)}
@@ -33,17 +37,21 @@ I don't know why she swallowed the fly. Perhaps she'll die.
 
   swallows(number) {
     let swallowVerses = "";
-    for (let i = 0; i < number; i++) {
-      if (this.verses[number] === "bird") {
+    let verseCount = number;
+    for (let i = 0; i <= number; i++) {
+      if (this.verses[verseCount] === "bird") {
         swallowVerses += this.spider();
-        number -= 1;
+        verseCount -= 1;
+      } else if (this.verses[verseCount] === "fly") {
+        swallowVerses += "";
       } else {
-        swallowVerses += `She swallowed the ${this.verses[number]} to catch the ${this.verses[number -= 1]}.`;
+        swallowVerses += `She swallowed the ${this.verses[verseCount]} to catch the ${this.verses[verseCount -= 1]}.`;
+
       }
 
-      if (number >= 2) swallowVerses += `\n`;
+      if (verseCount >= 2) swallowVerses += `\n`;
     }
-    console.log(swallowVerses)
+
     return swallowVerses;
   }
 

@@ -36,7 +36,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     expect(song.verse(3)).toEqual(expected);
   });
 
-  xtest('cat', () => {
+  test('cat', () => {
     const expected = `I know an old lady who swallowed a cat.
 Imagine that, to swallow a cat!
 She swallowed the cat to catch the bird.
@@ -48,7 +48,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     expect(song.verse(4)).toEqual(expected);
   });
 
-  xtest('dog', () => {
+  test('dog', () => {
     const expected = `I know an old lady who swallowed a dog.
 What a hog, to swallow a dog!
 She swallowed the dog to catch the cat.
@@ -61,7 +61,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     expect(song.verse(5)).toEqual(expected);
   });
 
-  xtest('goat', () => {
+  test('goat', () => {
     const expected = `I know an old lady who swallowed a goat.
 Just opened her throat and swallowed a goat!
 She swallowed the goat to catch the dog.
@@ -75,7 +75,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     expect(song.verse(6)).toEqual(expected);
   });
 
-  xtest('cow', () => {
+  test('cow', () => {
     const expected = `I know an old lady who swallowed a cow.
 I don't know how she swallowed a cow!
 She swallowed the cow to catch the goat.
@@ -90,7 +90,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
     expect(song.verse(7)).toEqual(expected);
   });
 
-  xtest('horse', () => {
+  test('horse', () => {
     const expected = `I know an old lady who swallowed a horse.
 She's dead, of course!
 `;
