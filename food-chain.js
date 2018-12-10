@@ -32,9 +32,23 @@ I don't know why she swallowed the fly. Perhaps she'll die.
   }
 
   swallows(number) {
-    for (let i = 1; i < number; i++) {
-      return `She swallowed the ${this.verses[number]} to catch the ${this.verses[number -= 1]}.`;
+    let swallowVerses = "";
+    for (let i = 0; i < number; i++) {
+      if (this.verses[number] === "bird") {
+        swallowVerses += this.spider();
+        number -= 1;
+      } else {
+        swallowVerses += `She swallowed the ${this.verses[number]} to catch the ${this.verses[number -= 1]}.`;
+      }
+
+      if (number >= 2) swallowVerses += `\n`;
     }
+    console.log(swallowVerses)
+    return swallowVerses;
+  }
+
+  spider() {
+    return `She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.`;
   }
 }
 
