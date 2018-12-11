@@ -48,12 +48,12 @@ She's dead, of course!
 
     if (number > 1) {
       verse += `
-${this.swallows(number)}
+${this.swallows(number)}`;
+    }
+
+    verse += `
 I don't know why she swallowed the fly. Perhaps she'll die.
-`;  } else {
-      verse += `
-I don't know why she swallowed the fly. Perhaps she'll die.
-`;  }
+`;
 
     return verse;
   }
