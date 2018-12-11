@@ -67,7 +67,7 @@ I don't know why she swallowed the fly. Perhaps she'll die.
         swallowVerses += this.spiderAndBird();
         verseCount -= 1;
       } else if (this.critters[verseCount] === "fly") {
-        swallowVerses += "";
+        swallowVerses;
       } else {
         swallowVerses += `She swallowed the ${this.critters[verseCount]} to catch the ${this.critters[verseCount -= 1]}.`;
       }
