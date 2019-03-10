@@ -51,11 +51,15 @@ She's dead, of course!
 ${this.swallows(number)}`;
     }
 
-    verse += `
-I don't know why she swallowed the fly. Perhaps she'll die.
-`;
+    verse += this.die();
 
     return verse;
+  }
+
+  die() {
+  return  `
+I don't know why she swallowed the fly. Perhaps she'll die.
+`;
   }
 
   swallows(number) {
